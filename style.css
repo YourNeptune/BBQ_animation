@@ -1,0 +1,73 @@
+*{
+    box-sizing: border-box;
+}
+
+.bbq_svg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#arm{
+    animation: arm 2s infinite alternate;
+    transform-origin: top;
+    transform-box: fill-box;
+}
+
+@keyframes arm {
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(-10deg);
+    }
+}
+
+#smoke{
+    animation: smoke 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes smoke {
+    from{
+        transform: rotateX(35deg);
+    }
+    to{
+        transform: rotateX(30deg);
+    }
+}
+
+#sausage1,#sausage2{
+    animation: sausage 2s infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes sausage{
+    0%{
+        transform: translateY(0) rotate(0deg);
+    }
+    40%{
+        transform: translateY(-150%) rotate(0deg);
+    }
+    60%{
+        transform:translateY(-150%) rotate(180deg);
+    }
+    100%{
+        transform: translateY(0) rotate(180deg);
+    }
+}
+
+#head{
+    animation: head 2s infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+
+@keyframes head{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(5deg);
+    }
+}
